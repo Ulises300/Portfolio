@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulises Gomez Mayorga</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <!-- Contenido del modal -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1 id="modalTitle"></h1>
+            <h3 id="modalDescription"></h3>
+            <img src="" id="modalImage" class="project_photo" alt="" width="300px">
+            <div class="btnDetalles"><a href="" id="modalLink" class="fs-3">Ir al sitio</a></div>
+
+        </div>
+    </div>
+
+    <div class="content">
+        <nav>
+            <ul class="d-flex j-center a-center">
+                <li class="btnNav"><a href="#inicio" class="smooth-scroll">Inicio</a></li>
+                <li class="btnNav"><a href="#sobreMi" class="smooth-scroll">Sobre Mi</a></li>
+                <li class="btnNav"><a href="#mis-proyectos" class="smooth-scroll">Mis Proyectos</a></li>
+            </ul>
+        </nav>
+        <div class="panel" id="inicio">
+            <div class="b-radius-20 d-flex s-around align-center info w-100 bg-black ">
+                <div class="d-flex f-column">
+                    <h1 class="fs-4">Ulises Gomez Mayorga </h1><br>
+                    <h2>FullStack Developer</h2>    
+                </div>
+                
+                <img src="img/profile.webp" class="profile_photo b-radius-20" alt="" width="300px">
+            </div>
+        </div>
+
+        <div class="panel d-flex s-around" id="sobreMi">
+
+            <div class="info w-50 d-flex f-column gap-10 j-center a-centers p-5">
+                  <h1 class="fs-4 title">Sobre mí</h1>
+                  <div class="data">
+                    <h2 class="ta-center">Soy Ulises Gomez Mayorga, tengo 19 años y estoy en busca de un empleo en el cual pueda aportar mis conocimientos en desarrollo web. Me recibí como Técnico en Informática Personal y Profesional el año pasado y actualmente me encuentro cursando la carrera de Licenciatura en Sistemas en la Universidad Nacional de General Sarmiento(UNGS).</h2>
+                  </div>
+            </div>
+
+
+            <div class="info w-50 d-flex f-column gap-10 j-center a-centers p-5">
+                <h1 class="fs-4 title">Mis conocimientos</h1>
+                <div class="data">
+                    <ul class="d-flex j-center a-center flex-wrap">
+                        <li class="fs-3">PHP</li>
+                        <li class="fs-3">HTML5</li>
+                        <li class="fs-3">CSS</li>
+                        <li class="fs-3">MYSQL</li>
+                        <li class="fs-3">JavaScript</li>
+                        <li class="fs-3">Laravel</li>
+                        <li class="fs-3">VueJS</li>
+                        <li class="fs-3">ReactJS</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel" id="mis-proyectos">
+            <div class="info w-100 j-center f-column">
+                <h1 class="fs-4 title">Mis Proyectos</h1>
+                <div class="data">
+                    <ul class="d-flex j-center a-center flex-wrap">
+                        <li class="w-25 bg-black d-flex j-center a-center f-column p-3 border-black min-height s-around">
+                        <div class="fs-4">My Book</div>
+                        <div class="fs-3">Tu biblioteca virtual.</div>
+                        <img src="img/mybook.webp" class="project_photo" alt="" width="300px">
+                        <div class="btnDetalles"><button onclick="getPagina(getElementById('1').id)" id="1" class="fs-3">Detalles</button></div>
+                        </li>
+                        <li class="w-25 bg-black d-flex j-center a-center f-column p-3 border-black min-height s-around">
+                        <div class="fs-4">Stocker</div>
+                        <div class="fs-3">Tu gestor de inventario.</div>
+                        <div><a href="/stocker/views/landing.html" class="fs-3">Detalles</a></div>
+                        </li>
+                        <li class="w-25 bg-black d-flex j-center a-center f-column p-3 border-black min-height s-around">
+                        <div class="fs-4">My E-Commerce</div>
+                        <div class="fs-3">Tu tienda virtual.</div>
+                        <div><a href="https://biblio.tecnica3.com.ar/demo" class="fs-3">Detalles</a></div>
+                        </li>
+                        <li class="w-25 bg-black d-flex j-center a-center f-column p-3 border-black min-height s-around">
+                        <div class="fs-4">My Services</div>
+                        <div class="fs-3">Tu gestor de reservas.</div>
+                        <div><a href="https://biblio.tecnica3.com.ar/demo" class="fs-3">Detalles</a></div>
+                        </li>
+                        <li class="w-25 bg-black d-flex j-center a-center f-column p-3 border-black min-height s-around">
+                        <div class="fs-4">My Book</div>
+                        <div class="fs-3">Desarrollo e implementación de una aplicación web que agiliza la gestión de préstamos, socios y libros, mejorando la eficiencia operativa de la biblioteca escolar mediante el uso de PHP, JavaScript, HTML, CSS y MySQL.</div>
+                        <div><a href="https://biblio.tecnica3.com.ar/demo" class="fs-3">Detalles</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+    <script src="js/modal.js"></script>
+
+<script>
+    // Selecciona todos los enlaces con la clase 'smooth-scroll'
+    const smoothScrollLinks = document.querySelectorAll('.smooth-scroll');
+
+    // Recorre cada enlace
+    smoothScrollLinks.forEach(link => {
+        // Agrega un listener de evento para cuando se hace clic en el enlace
+        link.addEventListener('click', (event) => {
+            // Previene el comportamiento predeterminado del enlace (navegación)
+            event.preventDefault();
+
+            // Obtiene el atributo 'href' del enlace (el identificador de la sección a la que se va a desplazar)
+            const targetId = link.getAttribute('href');
+
+            // Obtiene la posición Y de la sección objetivo
+            const targetPosition = document.querySelector(targetId).offsetTop;
+
+            // Realiza el desplazamiento suave
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Agrega un evento de clic al elemento de la tarjeta de experiencia
+    const cardExp = document.getElementById('card_exp');
+    const details = document.getElementById('details');
+
+    // Agrega un evento de clic al elemento de la tarjeta de experiencia
+    cardExp.addEventListener('click', function() {
+        // Verifica si los detalles están ocultos o visibles
+        if (details.style.maxHeight === '0px') {
+            // Si están ocultos, muéstralos
+            details.style.maxHeight = '1000px';
+        } else {
+            // Si están visibles, ocúltalos
+            details.style.maxHeight = '0px';
+        }
+    });
+</script>

@@ -1,0 +1,10 @@
+[
+	{
+		"id":1,
+		"titulo": "My Book",
+		"detalles_resumido":"Tu biblioteca virtual.",
+		"detalles": "Aplicación web que agiliza la gestión de préstamos, socios y libros, mejorando la eficiencia operativa de una biblioteca mediante el uso de PHP, JavaScript, HTML, CSS y MySQL.",
+		"enlace": "https://biblio.tecnica3.com.ar/demo",
+		"ruta_foto":"img/mybook.webp"
+	}
+]

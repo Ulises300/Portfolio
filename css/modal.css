@@ -1,0 +1,66 @@
+
+/* Estilo del botón */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #008CBA;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #005f6a;
+}
+
+/* Estilos del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1; /* Por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* Scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #030010;
+    margin: 15% auto; /* 15% desde la parte superior y centrado horizontalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Puede ajustar este ancho según sea necesario */
+    max-width: 500px; /* Ancho máximo */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo de la X de cierre */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modalDescription{
+    align-items: justify;
+}
+
+#modalImage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
